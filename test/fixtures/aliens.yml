@@ -1,0 +1,43 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  tagline: MyString
+  effect: MyText
+  flavour: MyText
+  mandatory: false
+  startturn: false
+  regroup: false
+  destiny: false
+  launch: false
+  alliance: false
+  planning: false
+  reveal: false
+  reveal: false
+  resolution: false
+  colour: 1
+  offense: false
+  defense: false
+  ally: false
+  bystander: false
+
+two:
+  name: MyString
+  tagline: MyString
+  effect: MyText
+  flavour: MyText
+  mandatory: false
+  startturn: false
+  regroup: false
+  destiny: false
+  launch: false
+  alliance: false
+  planning: false
+  reveal: false
+  reveal: false
+  resolution: false
+  colour: 1
+  offense: false
+  defense: false
+  ally: false
+  bystander: false
