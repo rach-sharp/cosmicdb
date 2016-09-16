@@ -13,3 +13,9 @@
  *= require_tree .
  *= require_self
  */
+
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+
+/* padding to ensure navbar doesn't cover content */
+body { padding-top: 70px; }
