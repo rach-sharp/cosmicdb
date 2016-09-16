@@ -1,2 +1,33 @@
 <%= render 'layouts/main_navbar' %>
-<h1> COSMIC DB! </h1>
+
+<div class="container text-center">
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="row">
+        <%= link_to aliens_path do %>
+          <%= image_tag("hate.jpg", size: "200") %><br>
+          Aliens
+        <% end %>
+      </div>
+      <br>
+      <div class="row">
+          <div class="col">
+              <%= link_to expansions_path do %>
+                 <%= image_tag("expansion.png", size: "200") %><br>
+                 Expansions
+              <% end %>
+          </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <%= image_tag "alien-head-512.png", size: "384" %>
+      <div class="row">
+          <div class="col">
+              <h1> CosmicDB </h1>
+          </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+    </div>
+  </div>
+</div>
