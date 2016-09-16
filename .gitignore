@@ -20,5 +20,5 @@
 # Ignore Byebug command history file.
 .byebug_history
 
-# Sharing seeds data later in the project
-seeds.rb
+# Ignore secrets file
+/config/secrets.yml
