@@ -1,2 +1,25 @@
 <%= render 'layouts/main_navbar' %>
-<h1> ALIENS INDEX PLACEHOLDER </h1>
+
+<div class="container" align="center">
+<table class="table table-hover table-condensed table-responsive table-nonfluid">
+
+<h3> Aliens Index </h3>
+
+<tr>
+	<th class="col-sm-3">Name</th>
+	<th class="col-sm-4">Tagline</th>
+	<th class="col-sm-3">Expansion</th>
+	<th class="col-sm-1">Colour</th>
+</tr>
+
+<% @aliens.each do |alien| %>
+	<tr>
+		<td class="col-sm-3"><%= link_to alien.name, alien_path(alien.id) %></td>
+		<td class="col-sm-4"><%= alien.tagline %></td>
+		<td class="col-sm-3"><%= alien.expansion.name %></td>
+		<td class="col-sm-1"><%= alien.colour %></td>
+	</tr>
+<% end %>
+
+</table>
+</div>

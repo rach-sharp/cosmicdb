@@ -1,2 +1,58 @@
 <%= render 'layouts/main_navbar' %>
-<h1> ALIEN SHOW PLACEHOLDER </h1>
+
+<div class="container" align="center">
+<h1><%= @alien.name %></h1>
+
+<h4><%= @alien.tagline %></h4>
+</div>
+<div class="container-fluid" align="center">
+<table class="table table-paragraphs">
+
+<tr>
+	<td><%= @alien.effect %></td>
+</tr>
+
+<tr>
+	<td class="flavour"><%= @alien.flavour %></td>
+</tr>
+
+<tr>
+	<td>Usable in:
+	<%= if @alien.startturn then 'START-TURN' end %>
+	<%= if @alien.regroup then 'REGROUP' end %>
+	<%= if @alien.destiny then 'DESTINY' end %>
+	<%= if @alien.launch then 'LAUNCH' end %>
+	<%= if @alien.alliance then 'ALLIANCE' end %>
+	<%= if @alien.planning then 'PLANNING' end %>
+	<%= if @alien.reveal then 'REVEAL' end %>
+	<%= if @alien.resolution then 'RESOLUTION' end %>
+	</td>
+</tr>
+
+<tr>
+	<td><%= if (@alien.offense && @alien.defense && @alien.ally && @alien.bystander) then 'As Any Player' end %>
+	<%= if (@alien.offense && @alien.defense && @alien.ally && !@alien.bystander) then 'As A Main Player Or Ally' end %>
+	<%= if (@alien.offense && @alien.defense && !@alien.ally && @alien.bystander) then 'Not As An Ally' end %>
+	<%= if (@alien.offense && !@alien.defense && @alien.ally && @alien.bystander) then 'Not As Defense' end %>
+	<%= if (!@alien.offense && @alien.defense && @alien.ally && @alien.bystander) then 'Not As Offense' end %>
+
+	<%= if (@alien.offense && @alien.defense && !@alien.ally && !@alien.bystander) then 'As A Main Player' end %>
+	<%= if (@alien.offense && !@alien.defense && @alien.ally && !@alien.bystander) then 'As Offense Or Ally' end %>
+	<%= if (!@alien.offense && @alien.defense && @alien.ally && !@alien.bystander) then 'As Defense Or Ally' end %>
+	<%= if (@alien.offense && !@alien.defense && !@alien.ally && @alien.bystander) then 'As Offense Or Bystander' end %>
+	<%= if (!@alien.offense && @alien.defense && !@alien.ally && @alien.bystander) then 'As Defense Or Bystander' end %>
+	<%= if (!@alien.offense && !@alien.defense && @alien.ally && @alien.bystander) then 'Not As A Main Player' end %>
+
+	<%= if (@alien.offense && !@alien.defense && !@alien.ally && !@alien.bystander) then 'As Offense' end %>
+	<%= if (!@alien.offense && @alien.defense && !@alien.ally && !@alien.bystander) then 'As Defense' end %>
+	<%= if (!@alien.offense && !@alien.defense && @alien.ally && !@alien.bystander) then 'As An Ally' end %>
+	<%= if (!@alien.offense && !@alien.defense && !@alien.ally && @alien.bystander) then 'As A Bystander' end %>
+	</td>
+</tr>
+
+<tr>
+	<td><%= if @alien.mandatory then 'MANDATORY' else 'OPTIONAL' end %></td>
+</tr>
+
+</table>
+</div>

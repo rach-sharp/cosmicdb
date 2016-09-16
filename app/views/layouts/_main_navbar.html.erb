@@ -6,9 +6,9 @@
     </div>
       <div class= "collapse navbar-collapse" id="navbar-collapse-1">
           <ul class="nav navbar-nav">
-            <li><%= link_to 'CosmicDB', root_path, class: "navbar-brand" %></li>
-            <li><%= link_to 'Aliens', aliens_path %></li>
-            <li><%= link_to 'Expansions', expansions_path %></li>
+            <li class="<%= 'active' if params[:controller] == 'application' %>"><%= link_to 'CosmicDB', root_path, class: "navbar-brand" %></li>
+            <li class="<%= 'active' if params[:controller] == 'aliens' %>"><%= link_to 'Aliens', aliens_path %></li>
+            <li class="<%= 'active' if params[:controller] == 'expansions' %>"><%= link_to 'Expansions', expansions_path %></li>
           </ul>
       </div>
     </div>

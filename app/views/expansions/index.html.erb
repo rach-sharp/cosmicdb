@@ -1,2 +1,19 @@
 <%= render 'layouts/main_navbar' %>
-<h1> EXPANSIONS INDEX PLACEHOLDER </h1>
+
+<h3> Expansions </h3>
+
+
+<table class="table table-hover table-condensed table-responsive">
+	<tr>
+		<th>Name</th>
+		<th>Published</th>
+	</tr>
+
+	<% @expansions.each do |expansion| %>
+	<tr>
+		<td><%= expansion.name %></td>
+		<td><%= expansion.published %></td>
+	</tr>
+	<% end %>
+
+</table>
