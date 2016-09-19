@@ -7,23 +7,73 @@
 <br>
 </div>
 
-<table class="table table-hover table-condensed table-responsive table-nonfluid">
+<nav aria-label="Page navigation">
+  <ul class="pagination">
+    <li>
+      <a href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    <li><a href="#">A - E</a></li>
+    <li><a href="#">F - J</a></li>
+    <li><a href="#">K - O</a></li>
+    <li><a href="#">P - T</a></li>
+    <li><a href="#">U - Z</a></li>
+    <li>
+      <a href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>
 
-<tr>
-	<th class="col-sm-3">Name</th>
-	<th class="col-sm-4">Tagline</th>
-	<th class="col-sm-3">Expansion</th>
-	<th class="col-sm-1">Colour</th>
-</tr>
+<div class="container">
+	<% @aliens.each do |alien| %>
+		<div class="container" align="left">
 
-<% @aliens.each do |alien| %>
-	<tr>
-		<td class="col-sm-3"><%= link_to alien.name, alien_path(alien.id) %></td>
-		<td class="col-sm-4"><%= alien.tagline %></td>
-		<td class="col-sm-3"><%= alien.expansion.name %></td>
-		<td class="col-sm-1"><%= alien.colour %></td>
-	</tr>
-<% end %>
+			<div class="row">
+				<div class="column col-sm-3 col-sm-offset-1" align="left">
+					<h3> <%= link_to alien.name, alien_path(alien.id) %> </h3>
+				</div>
+				<div class="column col-sm-7" align="left">
+					<h3> <%= alien.tagline %> </h3>
+				</div>
+			</div>
 
-</table>
+			<br>
+
+			<div class="row">
+				<div class="column col-sm-3 col-sm-offset-1">
+					<%= image_tag("hate.jpg", size: "200") %>
+				</div>
+				<div class="column col-sm-7">
+					<p> <%= alien.effect %> </p> <br>
+					<p class="flavour"> <%= alien.flavour %> </p>
+				</div>
+			</div>
+		</div>
+		<br>
+	<% end %>
+</div>
+
+<nav aria-label="Page navigation">
+  <ul class="pagination">
+    <li>
+      <a href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    <li><a href="#">A - E</a></li>
+    <li><a href="#">F - J</a></li>
+    <li><a href="#">K - O</a></li>
+    <li><a href="#">P - T</a></li>
+    <li><a href="#">U - Z</a></li>
+    <li>
+      <a href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+
 </div>
