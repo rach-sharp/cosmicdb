@@ -1,22 +1,20 @@
 <%= render 'layouts/main_navbar' %>
 
-<div class="container" align="center">
+<div class="container" align="center" style="padding: 1% 0;">
 
-<h3> Expansions </h3>
+	<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
 
-<table class="table table-hover table-condensed table-responsive">
-	<tr>
-		<th>Name</th>
-		<th>Published</th>
-	</tr>
-
-	<% @expansions.each do |expansion| %>
-	<tr>
-		<td><%= expansion.name %></td>
-		<td><%= expansion.published %></td>
-	</tr>
-	<% end %>
-
-</table>
+	<div class="container text-center" style="padding: 2% 0;">
+		<div class="row">
+			<% @expansions.each do |expansion| %>
+				<div class="col-sm-4">
+					<a href="#" class="thumbnail">
+						<%= image_tag("expansion.png", size: "140") %><br>
+						<h5><%= "#{expansion.name} (#{expansion.published})" %></h5>
+					</a>
+				</div>
+			<% end %>
+		</div>
+	</div>
 
 </div>
