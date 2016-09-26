@@ -20,9 +20,6 @@
 # Ignore Byebug command history file.
 .byebug_history
 
-# Ignore secrets file
-/config/secrets.yml
-
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml
