@@ -22,3 +22,8 @@
 
 # Ignore secrets file
 /config/secrets.yml
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
