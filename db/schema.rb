@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 20160915224255) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "aliens", force: :cascade do |t|
     t.string   "name"
     t.string   "tagline"
@@ -34,7 +37,7 @@ ActiveRecord::Schema.define(version: 20160915224255) do
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
     t.integer  "expansion_id"
-    t.index ["expansion_id"], name: "index_aliens_on_expansion_id"
+    t.index ["expansion_id"], name: "index_aliens_on_expansion_id", using: :btree
   end
 
   create_table "expansions", force: :cascade do |t|
@@ -45,4 +48,5 @@ ActiveRecord::Schema.define(version: 20160915224255) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "aliens", "expansions"
 end
