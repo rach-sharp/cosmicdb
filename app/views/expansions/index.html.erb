@@ -2,14 +2,17 @@
 
 <div class="container" align="center" style="padding: 1% 0;">
 
-	<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+	<p> In each expansion, a slew of new alien races explode onto the galactic scene.
+		Each expansion contains between 20 and 30 new alien races and often contains
+		ships in a new colour which allows more people to play. Several of the expansions
+		also contain other variants on normal gameplay.</p>
 
 	<div class="container text-center" style="padding: 2% 0;">
 		<div class="row">
 			<% @expansions.each do |expansion| %>
 				<div class="col-sm-4">
 					<a href="#" class="thumbnail">
-						<%= image_tag("expansion.png", size: "140") %><br>
+						<%= image_tag("#{expansion.name}.png".gsub(" ", "_").downcase(), size: "140") %><br>
 						<h5><%= "#{expansion.name} (#{expansion.published})" %></h5>
 					</a>
 				</div>

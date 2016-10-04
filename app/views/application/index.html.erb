@@ -6,7 +6,7 @@
         <div class="col-sm-4">
           <div class="row">
             <%= link_to aliens_path do %>
-              <%= image_tag("hate.jpg", size: "200") %><br>
+              <%= image_tag("aliens_icon.png", height: "200", width:282) %><br>
               Aliens
             <% end %>
           </div>
@@ -14,7 +14,7 @@
           <div class="row">
               <div class="col">
                   <%= link_to expansions_path do %>
-                     <%= image_tag("expansion.png", size: "200") %><br>
+                     <%= image_tag("expansions_icon.png", height: "200", width: "266") %><br>
                      Expansions
                   <% end %>
               </div>
@@ -34,6 +34,9 @@
             <div class="row">
               <div class="col">
                   <input type="text", size="40", placeholder="Search for something Cosmic...", autofocus>
+                  <%= link_to '#' do %>
+                    <i class="glyphicon glyphicon-search"></i>
+                  <% end %>
               </div>
             </div>
         </div>
